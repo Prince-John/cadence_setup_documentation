@@ -15,7 +15,7 @@ To get to the raid menu:
 #### ERROR NOTE:
 
 rhel 8 does not recognise the sas controller on the dell presision7600 by default. 
-
+https://www.dell.com/community/Precision-Fixed-Workstations/Intel-C600-Series-Chipset-SAS-RAID-Controller-for-Dell-T7600/td-p/7517094
 You will need to get the driver from elrepo. 
 
 Append this command after hitting `tab`  on the install splash screen. *Note: This is not possible if BIOS is set as UEFI, set BIOS back to legacy to access the tab screen*
@@ -26,4 +26,13 @@ Verifed that this works. If kernel is updated a newer SAS driver will be require
 
 root password: guest
 # CHANGE THIS!!!
+
+
+**May 12th**
+
+Registered the rhel install to my account with username: prince.apple.john@gmail.com
+Necessary to get `yum` to work. -- change at some point to university account.
+
+Installed `Tcl` and `Ksh`, created a lab user account `cdsadmin` with sudo access.  
+
 
