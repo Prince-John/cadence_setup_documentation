@@ -36,3 +36,34 @@ Necessary to get `yum` to work. -- change at some point to university account.
 Installed `Tcl` and `Ksh`, created a lab user account `cdsadmin` with sudo access.  
 
 
+## SSH + VNC setup
+
+**May 16th**
+
+ssh setup complete and verified
+
+updated all software through the webcokpit for rhel
+
+system crash/kernel panic on reboot, no clue why. 
+
+Boots into rhel with no errors in version 3.1.el8  and rescue but crashes with the default boot option version `4.18.0-425.19.2.el8_7.x86_64
+
+ I've changed this to `3.1.el8` so that default boots and not crashes. 
+
+**This is how it is done**
+```
+[prince@localhost ~]$ sudo grubby --info=ALL | grep title
+
+**title**="Red Hat Enterprise Linux (4.18.0-425.19.2.el8_7.x86_64) 8.7 (Ootpa)"
+
+**title**="Red Hat Enterprise Linux (4.18.0-425.3.1.el8.x86_64) 8.7 (Ootpa)"
+
+**title**="Red Hat Enterprise Linux (0-rescue-e51dd064914944b29a5af109dcad2304) 8.7 (Ootpa)"
+
+[prince@localhost ~]$ sudo grub2-set-default 1
+
+[prince@localhost ~]$ sudo grubby --default-kernel
+
+/boot/vmlinuz-4.18.0-425.3.1.el8.x86_64
+```
+
